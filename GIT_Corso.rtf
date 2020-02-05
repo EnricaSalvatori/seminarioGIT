@@ -1,0 +1,318 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red180\green36\blue25;\red159\green160\blue28;
+\red46\green174\blue187;\red47\green180\blue29;\red0\green0\blue0;\red0\green0\blue0;\red205\green190\blue151;
+\red122\green37\blue30;\red80\green219\blue57;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c76409\c21698\c12524;\cssrgb\c68468\c68012\c14208;
+\cssrgb\c20196\c73240\c78250;\cssrgb\c20238\c73898\c14947;\csgray\c0\c0;\cssrgb\c0\c0\c0;\cssrgb\c84314\c78824\c65490;
+\csgenericrgb\c47826\c14510\c11688\c85000;\cssrgb\c36086\c86768\c28561;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 GIT\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 Air-di-EnricaS:~ Trapelicino$ git --version\
+git version 2.21.0\
+Air-di-EnricaS:~ Trapelicino$ \
+comando per verificare la versione di GIT sul proprio computer\
+\
+Riferimento bibliografico https://git-scm.com/book/en/v2\
+\
+Air-di-EnricaS:~ Trapelicino$ git\
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\
+           <command> [<args>]\
+\
+These are common Git commands used in various situations:\
+\
+start a working area (see also: git help tutorial)\
+   clone     Clone a repository into a new directory\
+   init      Create an empty Git repository or reinitialize an existing one\
+\
+work on the current change (see also: git help everyday)\
+   add       Add file contents to the index\
+   mv        Move or rename a file, a directory, or a symlink\
+   restore   Restore working tree files\
+   rm        Remove files from the working tree and from the index\
+\
+examine the history and state (see also: git help revisions)\
+   bisect    Use binary search to find the commit that introduced a bug\
+   diff      Show changes between commits, commit and working tree, etc\
+   grep      Print lines matching a pattern\
+   log       Show commit logs\
+   show      Show various types of objects\
+   status    Show the working tree status\
+\
+grow, mark and tweak your common history\
+   branch    List, create, or delete branches\
+   commit    Record changes to the repository\
+   merge     Join two or more development histories together\
+   rebase    Reapply commits on top of another base tip\
+   reset     Reset current HEAD to the specified state\
+   switch    Switch branches\
+   tag       Create, list, delete or verify a tag object signed with GPG\
+\
+collaborate (see also: git help workflows)\
+   fetch     Download objects and refs from another repository\
+   pull      Fetch from and integrate with another repository or a local branch\
+   push      Update remote refs along with associated objects\
+\
+'git help -a' and 'git help -g' list available subcommands and some\
+concept guides. See 'git help <command>' or 'git help <concept>'\
+to read about a specific subcommand or concept.\
+See 'git help git' for an overview of the system.\
+\
+comando git + sottoprogramma detto verb pu\'f2 avere anche opzioni con trattino \'f9 carattere o 2 trattini con keyword parlante\
+esempio\
+\
+git --version : indica la versione di installazione\
+\
+\
+3 principi\
+* quando lavoriamo a riga di comando sui nostri file lavoriamo in un ambiente che ha una sua directory (
+\f2\b working directory
+\f1\b0 ). Quando lavoriamo qui non salva le versioni\
+* quando decidiamo di salvare le nostre modifiche lo facciamo in un area cuscinetto 
+\f2\b staging area
+\f1\b0 \
+* dopo passiamo all\'92area definitiva 
+\f2\b git directory\
+\
+\
+Ci permette di configurare la cosa su tre livelli\
+* locale\
+* gestire la nostra utenza globalmente\
+* di sistema\
+\
+Come si lavora su terminale\
+
+\f1\b0 cd + nome change directory\
+mkdir + nome crea la cartella\
+pwd path riferito alla nostra cartella \'97> mi dice dove sono\
+Air-di-EnricaS:seminarioGIT Trapelicino$ pwd\
+/Users/Trapelicino/seminarioGIT\
+Per creare un file\
+touch + nomefile se c\'92\'e8 gi\'e0 aggiorna la data di modifica altrimenti lo crea\
+ls mostra il contenuto della tua directory\
+\
+per inserire la mia cartella nel mio sistema di tracciamento\
+git init \'97> inizializza una repository nella cartella in cui siamo\
+\
+Air-di-EnricaS:seminarioGIT Trapelicino$ git init\
+Initialized empty Git repository in /Users/Trapelicino/seminarioGIT/.git/\
+Air-di-EnricaS:seminarioGIT Trapelicino$ \
+\
+il file \'e8 ancora nella working area e non \'e8 tracciato\
+\
+il comando per tenere sotto traccia le varie aree \'e8 git status\
+\
+Air-di-EnricaS:seminarioGIT Trapelicino$ git status\
+On branch master\
+\
+No commits yet\
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+	\cf3 imparoGIT.txt\cf2 \
+\
+nothing added to commit but untracked files present (use "git add" to track)\
+\
+Posso chiedere la configurazione locale\
+Air-di-EnricaS:seminarioGIT Trapelicino$ git config --local --list (varianti \'97global)\
+core.repositoryformatversion=0\
+core.filemode=true\
+core.bare=false\
+core.logallrefupdates=true\
+core.ignorecase=true\
+core.precomposeunicode=true\
+
+\f2\b \
+\
+git ha la necessit\'e0 di avere nome e email dell\'92utente \
+attraverso due comandi\
+user.name\
+user.email\
+
+\f1\b0 Air-di-EnricaS:seminarioGIT Trapelicino$ git config --local user.name "Enrica Salvatori"\
+Air-di-EnricaS:seminarioGIT Trapelicino$ git config --local user.email "enrica.salvatori@unipi.it"\
+Air-di-EnricaS:seminarioGIT Trapelicino$ git config --local --list\
+core.repositoryformatversion=0\
+core.filemode=true\
+core.bare=false\
+core.logallrefupdates=true\
+core.ignorecase=true\
+core.precomposeunicode=true\
+user.name=Enrica Salvatori\
+user.email=enrica.salvatori@unipi.it\
+
+\f2\b \
+\
+per Aiuto\
+
+\f1\b0 git help <verb>\
+man git\'97<verb>\
+git <verb> -\'97h  QUESTA E\'92 SINTETICA
+\f2\b \
+
+\f1\b0 \
+\
+Per mettere il file nell\'92area staging\
+git add \
+\
+git commit\
+mettere i file dell\'92area di stage li comprime assegna una stringa di 40 caratteri e registra questa versione nel repository\
+\
+commi richiede un messaggio il flag -m pi\'f9 una frase tra apici \'e8 il messaggio di commit\
+\
+per aggiungere alla staging area tutti i file della mia cartella\
+git add .\
+\
+\
+.gitgnore file\
+possiamo indicare quali file sono nella nostra directory ma non sono tracciati\
+\
+host-131-114-254-108:seminarioGIT Trapelicino$ touch .gitignore\
+host-131-114-254-108:seminarioGIT Trapelicino$ touch password.txt\
+host-131-114-254-108:seminarioGIT Trapelicino$ git status\
+On branch master\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+	\cf3 .gitignore\cf2 \
+	\cf3 password.txt\cf2 \
+\
+nothing added to commit but untracked files present (use "git add" to track)\
+\
+\
+ora riconosce che ci sono 2 file non tracciati\
+host-131-114-254-108:seminarioGIT Trapelicino$ vim .gitignore\
+apriamo .gitignore e ci scriviamo dentro il nome del file che \
+\
+per uscire :wq!\
+\
+gitt diff command mi fa vedere le modifiche tra il file corrente e la staging area e la repository\
+\
+l\'92unit\'e0 di misura delle modifiche \'e8 la riga\
+host-131-114-254-108:seminarioGIT Trapelicino$ git diff -h\
+usage: git diff [<options>] [<commit> [<commit>]] [--] [<path>...]\
+host-131-114-254-108:seminarioGIT Trapelicino$ \
+\
+\
+\
+con git diff --word-diff\
+ho una granularit\'e0 a livello di parola\
+\
+git rm toglie un file da git \
+git rm <file> dal repository\
+git mv <file-from> <file-to> \
+\
+se rinominato il file git non tiene traccia del cambiamento\
+\
+git log <options>\
+\
+che restituisce la storia del nostro repository\
+\
+git log \'97-stat\
+\
+host-131-114-254-108:seminarioGIT Trapelicino$ git log --oneline\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 12aa269 (
+\f2\b \cf5 HEAD -> \cf6 master
+\f1\b0 \cf4 )\cf2  tutto\
+\cf4 49bc926\cf2  riprovo\
+\cf4 1402d0d\cf2  metto tutto\
+\cf4 50aa484\cf2  prova\
+\cf4 3762e3c\cf2  prova\
+host-131-114-254-108:seminarioGIT Trapelicino$ \
+\
+output di log personalizzato\
+\
+git log --pretty=\'93%an\'94 \
+git log --pretty="%an: %ad" \'97> nome e data\
+git log --pretty="%ae: %p" \'97> nome e parent\
+\
+\
+amend\
+commit again using the  -amend option\
+\
+si fa se si ritiene quel commit un errore\
+\
+posso creare due trench distinti dove non creare conflitti \
+\
+il branch principale \'e8 il master\
+quando lavoriamo su un unico branco non ce ne accorgiamo ma git crea un\'92identit\'e0 legata all\'92ultimo commi che + il branch principale. \
+\
+git branch <name new brach>\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cb7 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf8 ls -al \
+mi d\'e0 le risosi. Si vedono le sottocartelle nascoste e una \'e8 .git\
+e\'92 quello che crea i numeri esadegimale e il database di versionamento\
+\
+\
+per spostarsi nei vari branch\
+git checkout <name branch> sposta il contatore head da un brach all\'92all\'92altro\
+git checkout testing\cf2 \cb1 \
+\
+\
+git log \'97oneline \'97decorate \'97graph \'97all e questo fa la storia dei committenti\
+\
+\cf8 \cb7 git branch -v illustra la storia dei branch\
+\
+se vogliamo fare il merge\
+\
+git merge\
+\
+\
+\cf9 \cb10 host-131-114-235-21:seminarioGIT Trapelicino$ git checkout master\
+Switched to branch 'master'\
+host-131-114-235-21:seminarioGIT Trapelicino$ git branch\
+* \cf11 master\cf9 \
+  secondobranch\
+  testing\
+git checkout modificato\
+Switched to branch 'modificato'\
+host-131-114-235-21:seminarioGIT Trapelicino$ \
+\cf8 \cb7 \
+i merge in git hanno 2 strategie\
+\
+1) possibilit\'e0 di incidere i cambiamenti che fanno parte della storia del branch in cui lavoriamo senza punti di discontinuit\'e0\
+queso politica di margina si chiama fast forward\
+\
+\cf9 \cb10 Switched to branch 'master'\
+host-131-114-235-21:seminarioGIT Trapelicino$ less imparoGIT.txt\
+host-131-114-235-21:seminarioGIT Trapelicino$ git branch\
+* \cf11 master\cf9 \
+  modificato\
+  secondobranch\
+  testing\
+host-131-114-235-21:seminarioGIT Trapelicino$ git merge modificato\
+Updating 12aa269..42ce950\
+Fast-forward\
+ imparoGIT.txt | 2 \cf11 ++\cf9 \
+ 1 file changed, 2 insertions(+)\
+host-131-114-235-21:seminarioGIT Trapelicino$ \cf8 \cb7 \
+\
+\
+git remote gestiamo la parte server del nostro lavoro\
+\cf9 \cb10 git remote -v\
+ci dice se c\'92\'e8 gi\'e0 qualcosa\cb7 \
+\
+\cb10 git remode add \cf8 \cb7  con nome simbolico \'93origini\'94 e poi url \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf8 \cb1 \
+\cf2 \
+\
+\
+\
+\
+\
+\
+\
+\
+}
